@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VimTm
 // @namespace    VimTm
-// @version      1.0
+// @version      1.1
 // @description  VimTm
 // @author       Gino
 // @match        *://*/*
@@ -64,27 +64,35 @@
                         break;
 
                     case 'D':
-                        $('html, body').animate({
-                            scrollTop: '+=' + window.innerHeight / 2
-                        }, 100);
+                        window.scrollBy({
+                            top: window.innerHeight / 2,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
                         break;
 
                     case 'U':
-                        $('html, body').animate({
-                            scrollTop: '-=' + window.innerHeight / 2
-                        }, 100);
+                        window.scrollBy({
+                            top: -window.innerHeight / 2,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
                         break;
 
                     case 'J':
-                        $('html, body').animate({
-                            scrollTop: '+=200'
-                        }, 100);
+                        window.scrollBy({
+                            top: 200,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
                         break;
 
                     case 'K':
-                        $('html, body').animate({
-                            scrollTop: '-=200'
-                        }, 100);
+                        window.scrollBy({
+                            top: -200,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
                         break;
 
                     case ' ':
@@ -215,9 +223,9 @@ z-index: 2147483648;
 
             function getHints(elements) {
                 var hints = [];
-                var Y = 'ABCEGHILM';
+                var Y = 'ABCDEGHIJKLM';
                 var X = '1234567890';
-                var B = 'NOPQRSTVWXYZ' + Y + X;
+                var B = 'NOPQRSTUVWXYZ' + Y + X;
                 var lengthB = B.length;
 
                 var all = {};
