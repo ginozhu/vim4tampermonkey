@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VimTm
 // @namespace    VimTm
-// @version      1.1
+// @version      1.2
 // @description  VimTm
 // @author       Gino
 // @match        *://*/*
@@ -223,9 +223,9 @@ z-index: 2147483648;
 
             function getHints(elements) {
                 var hints = [];
-                var Y = 'ABCDEGHIJKLM';
+                var Y = 'ABCEGHILM';
                 var X = '1234567890';
-                var B = 'NOPQRSTUVWXYZ' + Y + X;
+                var B = 'NOPQRSTVWXYZ' + Y + X;
                 var lengthB = B.length;
 
                 var all = {};
