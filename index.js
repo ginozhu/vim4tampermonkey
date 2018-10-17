@@ -3,6 +3,7 @@
 // @namespace    VimTm
 // @version      1.0
 // @description  VimTm
+// @author       Gino
 // @match        *://*/*
 // @grant        GM_openInTab
 // @run-at       document-start
@@ -63,35 +64,27 @@
                         break;
 
                     case 'D':
-                        window.scrollBy({
-                            top: window.innerHeight / 2,
-                            left: 0,
-                            behavior: 'smooth'
-                        })
+                        $('html, body').animate({
+                            scrollTop: '+=' + window.innerHeight / 2
+                        }, 100);
                         break;
 
                     case 'U':
-                        window.scrollBy({
-                            top: -window.innerHeight / 2,
-                            left: 0,
-                            behavior: 'smooth'
-                        })
+                        $('html, body').animate({
+                            scrollTop: '-=' + window.innerHeight / 2
+                        }, 100);
                         break;
 
                     case 'J':
-                        window.scrollBy({
-                            top: 200,
-                            left: 0,
-                            behavior: 'smooth'
-                        })
+                        $('html, body').animate({
+                            scrollTop: '+=200'
+                        }, 100);
                         break;
 
                     case 'K':
-                        window.scrollBy({
-                            top: -200,
-                            left: 0,
-                            behavior: 'smooth'
-                        })
+                        $('html, body').animate({
+                            scrollTop: '-=200'
+                        }, 100);
                         break;
 
                     case ' ':
